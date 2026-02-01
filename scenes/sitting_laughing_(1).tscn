@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://dc4a3j8bj3x4v"]
+
+[ext_resource type="PackedScene" uid="uid://cnmvxaj50370f" path="res://addons/Sitting Laughing (1).fbx" id="1_qcd8o"]
+[ext_resource type="Script" uid="uid://ckkqgy4u0k7b8" path="res://scenes/sitting_laughing_(1).gd" id="2_y6p7v"]
+
+[sub_resource type="ORMMaterial3D" id="ORMMaterial3D_y6p7v"]
+
+[node name="Sitting Laughing (1)" instance=ExtResource("1_qcd8o")]
+script = ExtResource("2_y6p7v")
+
+[node name="Skeleton3D" parent="." index="0"]
+bones/5/rotation = Quaternion(0, 0, 0, 1)
+bones/17/rotation = Quaternion(0.25189453, -0.059464402, 0.22192542, 0.9400863)
+bones/34/rotation = Quaternion(0.008705135, -0.0008868446, -0.10134756, 0.9948126)
+bones/41/rotation = Quaternion(0.25189725, 0.05946548, -0.22192715, 0.9400852)
+
+[node name="Tops" parent="Skeleton3D" index="1"]
+surface_material_override/0 = SubResource("ORMMaterial3D_y6p7v")
+
+[node name="AnimationPlayer" parent="." index="1"]
+autoplay = "mixamo_com"

@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="Dialogue" load_steps=2 format=3 uid="uid://cff0hcolj48py"]
+
+[ext_resource type="Script" uid="uid://chuw4qlno88wq" path="res://historical_dialougue.gd" id="1_w8pc2"]
+
+[resource]
+script = ExtResource("1_w8pc2")
+npc_name = "npc_one"
+lines = Array[String](["Alright. Let’s stay calm.", "The body’s been there the whole time. No one touched it.", "He must’ve died quickly. There’s no blood on the floor.", "Whoever did it didn’t mean to make a mess.", "We should think about motive, not panic."])

@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://biklmp2qh4jt5"]
+
+[ext_resource type="PackedScene" uid="uid://dc4a3j8bj3x4v" path="res://scenes/sitting_laughing_(1).tscn" id="1_qduvm"]
+[ext_resource type="Script" uid="uid://c4jigxwewkygf" path="res://scenes/npc_smoking.gd" id="1_s8ks6"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_s8ks6"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_7qwjh"]
+size = Vector3(5.2871094, 3.1328125, 6.5977783)
+
+[node name="laughing" type="CharacterBody3D"]
+script = ExtResource("1_s8ks6")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(0.0068590567, 0.9999765, 0, -0.9999765, 0.0068590567, 0, 0, 0, 1, -0.0035317778, 0.51489514, 0)
+shape = SubResource("CapsuleShape3D_s8ks6")
+
+[node name="Sitting Laughing (1)" parent="." instance=ExtResource("1_qduvm")]
+
+[node name="Area3D" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.6567383, 0, 1.0674438)
+shape = SubResource("BoxShape3D_7qwjh")
+
+[node name="Label3D" type="Label3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.7915154, 1.4740702)
+text = "Heh… funny how quiet
+ it gets after someone dies"
+font_size = 64

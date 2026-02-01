@@ -1,0 +1,37 @@
+[gd_scene load_steps=3 format=3 uid="uid://beco8wwdbbt4l"]
+
+[ext_resource type="Texture2D" uid="uid://cd4flxfbxu34i" path="res://addons/terrain_3d/Simple_red_circle.svg.png" id="1_d5nsy"]
+[ext_resource type="AudioStream" uid="uid://c58l871u2euxp" path="res://assets/poppop.ai - womp womp sound effect.mp3" id="2_abo3r"]
+
+[node name="loose" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="SimpleRedCircle_svg" type="Sprite2D" parent="."]
+position = Vector2(579.50006, 374.99994)
+scale = Vector2(8.134001, 2.8440003)
+texture = ExtResource("1_d5nsy")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -486.0
+offset_top = -158.0
+offset_right = 747.0
+offset_bottom = 191.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 200
+text = "YOU LOSE"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_abo3r")
+autoplay = true

@@ -1,0 +1,70 @@
+[gd_scene load_steps=3 format=3 uid="uid://yvcltdoueahv"]
+
+[ext_resource type="Script" uid="uid://cubbwv8eon7oc" path="res://final/vote.gd" id="1_ja3h0"]
+[ext_resource type="Texture2D" uid="uid://cd4flxfbxu34i" path="res://addons/terrain_3d/Simple_red_circle.svg.png" id="2_8d016"]
+
+[node name="vote" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ja3h0")
+
+[node name="SimpleRedCircle_svg" type="Sprite2D" parent="."]
+position = Vector2(579.50006, 374.99994)
+scale = Vector2(8.134001, 2.8440003)
+texture = ExtResource("2_8d016")
+
+[node name="label" type="Label" parent="."]
+z_index = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.068
+anchor_right = 0.5
+anchor_bottom = 0.068
+offset_left = -314.0
+offset_top = 136.936
+offset_right = 314.0
+offset_bottom = 224.936
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 64
+text = "Who killed the man?"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -455.0
+offset_top = -22.0
+offset_right = 455.0
+offset_bottom = 202.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Button" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 40
+text = "Laughing Man"
+
+[node name="Button2" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 40
+text = "Calm Man"
+
+[node name="Button3" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 40
+text = "Sleeping Man"
+
+[connection signal="pressed" from="HBoxContainer/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="HBoxContainer/Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="HBoxContainer/Button3" to="." method="_on_button_3_pressed"]

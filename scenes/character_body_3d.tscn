@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://dko7je1qq0fv1"]
+
+[ext_resource type="PackedScene" uid="uid://cdkpjlxpkamao" path="res://scenes/laying_nodding.tscn" id="1_cvunv"]
+[ext_resource type="Script" uid="uid://bnprlnwau7j" path="res://scenes/character_body_3d.gd" id="1_o7tup"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_o7tup"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_cvunv"]
+size = Vector3(5.4, 3.1328125, 5.4)
+
+[node name="sleeping" type="CharacterBody3D"]
+script = ExtResource("1_o7tup")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(0.0068590567, 0.9999765, 0, -0.9999765, 0.0068590567, 0, 0, 0, 1, -0.0035317778, 0.51489514, 0)
+shape = SubResource("CapsuleShape3D_o7tup")
+
+[node name="Laying Nodding" parent="." instance=ExtResource("1_cvunv")]
+
+[node name="Area3D" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.71318364, 0, 0.46855474)
+shape = SubResource("BoxShape3D_cvunv")
+
+[node name="Label3D" type="Label3D" parent="."]
+transform = Transform3D(0.17364813, 0, -0.9848077, 0, 1, 0, 0.9848077, 0, 0.17364813, -1.1, 0, -4.8082526e-08)
+text = "I didn’t see anything. I 
+was asleep the whole time."
+font_size = 64
